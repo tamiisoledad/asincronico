@@ -1,0 +1,373 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container{
+  display: none;
+}
+
+.destacadoPar{
+  padding: 15px;
+  text-align: justify;
+  color: white;
+  background-color: rgba(86, 96, 72, 0.7);
+  margin: 10px;
+}
+.destacadoImpar{
+  padding: 15px;
+  text-align: justify;
+  color: white;
+  background-color: rgba(35, 57, 80, 0.7);
+  margin: 10px;
+}
+
+.fondo{
+  background-image: url('/img/vikingsposter.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+.fondoMoviesList{
+  background-image: url('/img/avengers.jpg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  width: 50%;
+  background-position: right;
+}
+.fondoCRUD{
+  padding: 30px;
+  background-image: url('/img/peliculas.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fondoTransparente{
+  background-color:rgba(189,199,191,0.7);
+  width: max-content;
+  padding:10px;
+  margin: auto;
+  text-align: center;
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
+img{
+  width: 100%;
+}
+figure{
+  width: 250px;
+}
+.titulo{
+  text-align: center;
+}
+.botonAgregar , .botonModificar{
+  color: white;
+  background-color: green;
+  padding: 10px;
+  border-radius: 10px;
+}
+.botonBorrar{
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.botonVolver{
+  color: white;
+  background-color: #00B7FF;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+/* Estilos para el menu */
+#menu {
+  position: fixed;
+  top: 109px;
+  width: 200px;
+  height: 100%;
+  background-color: rgba(37, 37, 37, 0.88);
+  left: -200px;
+  transition: all ease-in-out .5s;
+  z-index : 11;
+}
+
+#menu ul li {
+  color: #fff;
+  list-style: none;
+  text-align: center;
+  padding: 15px 5px;
+  border-bottom: 1px solid rgb(100, 100, 100, .88);
+}
+
+#menu.mostrar {
+  left: 0
+}
+
+.logoDH {
+  cursor: pointer;
+}
+
+.toggle img{
+  display: block;
+  width: 40px;
+}
+
+
+/* Interactuando con formularios =========== */
+input{
+  padding: 3px 4px;
+  border: 1px solid rgba(86, 96, 72, 0.7);
+  width: 100%
+}
+input:focus-visible{
+  border: 1px solid rgba(86, 96, 72, 0.7);
+  border-radius: 3px;
+}
+.is-invalid {
+  border: 1px solid #ff00007a;
+  border-radius: 3px;
+}
+.is-valid {
+  border: 1px solid #0066ff7a;
+  border-radius: 3px;
+}
+form.card p {
+  padding: 0
+}
+form.card p.error-input,
+form.card p.info-input {
+  background-color: #ff000070;
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: ghostwhite;
+  margin: 3px auto;
+  text-align: center;
+}
+form.card p.info-input {
+  background-color: rgba(65, 105, 225, 0.829);
+  color: whitesmoke;
+  
+}
+.input-form {
+  position: relative;
+  margin: auto;
+}
+#error {
+  width: 223px;
+  margin: auto;
+  text-align: left;
+  font-size: 12px;
+  padding: 10px;
+  background-color: rgba(250,250,250,0.5);
+  border-radius: 1px;
+  display: none;
+}
+select#genre_id {
+  padding: 3px 6px;
+}
+
+/* -------------- Asincronismo con JavaScript ----------------- */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+  color: #666;
+  background: #F6F6F6;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+p.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card p {
+  padding: 0 2.5rem 2.5rem;
+  margin: 0;
+  background-color: white;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+}
+
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}
+.action {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.botonAgregar , .botonModificar{
+  color: white;
+  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  margin: 5px;
+}
+.botonBorrar{
+  color: white;
+  background-image: linear-gradient(120deg, #BB2D3B 0%, #a6c1ee 100%);
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  margin: 5px;
+}
+
+.formulario label {
+  padding: 1.5rem 2.5rem;
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  
+}
+.formulario input, 
+.formulario select{
+  width: 100%;
+  height: 25px;
+  margin: 10px 0;
+  padding-left: 7px;
+}
+.contain-input {
+  position: relative;
+  padding: 0 23px 0 23px;
+}
+#info {
+  width: max-content;
+  position: fixed;
+  bottom: 29px;
+  left: 38px;
+}
+.response {
+  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  color: white;
+  padding: 11px 57px;
+  font-size: 1.1rem;
+  border-radius: 2px;
+}
+.fail {
+  background-image: linear-gradient(120deg, #BB2D3B 0%, #a6c1ee 100%);
+}
+
+@media (min-width: 320px) {
+  main {
+    padding: 10px;
+    padding-top: 120px
+  }
+  .card {
+    position: relative;
+    width: 100%;
+  }
+  #form-add {
+    width: 220px;
+    margin: auto;
+  }
+  .input-form {
+    width: 186px;
+  }
+  .formulario{
+    margin: auto;
+    width: max(50%, min(300px));
+    border-radius: 10px;
+  }
+} 
+.check-fav {
+  z-index: 100;
+  width: max-content;
+}
+input.fav,
+.fav-relleno {
+  display: none;
+}
+.fav i,
+.fav-relleno i {
+  padding: 7px;
+  font-size: 1.3rem;
+}
+input:checked ~ .fav-relleno {
+  display: block;
+}
+input:checked ~ .fav {
+  display: none;
+}
+@media (min-width: 425px ){
+  main {
+    padding: 50px;
+    padding-top: 120px
+  }
+
+}
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem);
+  }
+  .formulario {
+    max-width: 500px;
+  }
+  
+}
+
+.card:nth-child(2n) h1 {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.card:nth-child(4n) h1 {
+  background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.card:nth-child(5n) h1 {
+  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+}
+
